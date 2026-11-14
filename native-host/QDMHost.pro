@@ -1,0 +1,13 @@
+QT += core network
+QT -= gui
+CONFIG += console c++11 no_batch
+CONFIG -= app_bundle
+CONFIG -= debug_and_release debug_and_release_target
+TEMPLATE = app
+TARGET = QDM.NativeHost
+VERSION = 0.2.1
+DESTDIR = $$OUT_PWD/../bin
+INCLUDEPATH += ../src
+SOURCES += main.cpp ../src/browserprotocol.cpp
+HEADERS += ../src/browserprotocol.h
+LIBS += -lcrypt32 -ladvapi32 -luser32

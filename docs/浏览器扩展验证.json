@@ -1,0 +1,46 @@
+{
+  "chrome": {
+    "browser": "Chrome temporary profile",
+    "extension_id": "nkblcdnjneadmggjpnjajlbebpbmhjpj",
+    "health_version": "0.2.0",
+    "resource_count": 3,
+    "task_state": "Completed",
+    "sha256_verified": true
+  },
+  "edge": {
+    "browser": "edge temporary profile",
+    "extension_id": "nkblcdnjneadmggjpnjajlbebpbmhjpj",
+    "health_version": "0.2.0",
+    "resource_count": 2,
+    "task_state": "Completed",
+    "sha256_verified": true
+  },
+  "bridge": [
+    "Token / Origin / Host / extension identity checks: PASS",
+    "HTTP create/status/dedup/conflict/unsupported fields and streams: PASS (SHA-256)",
+    "Filename traversal contained inside desktop download profile: PASS",
+    "Bounded HTTP parsing rejects chunked/duplicate/oversize/malformed lengths: PASS",
+    "Native Messaging framing / origin / operation limits / actual download: PASS (SHA-256)",
+    "v1 migration preserves tasks; duplicate after restart remains one task: PASS"
+  ],
+  "downloads": [
+    "range: PASS (SHA-256)",
+    "stream: PASS (SHA-256)",
+    "unknown: PASS (SHA-256)",
+    "empty: PASS (SHA-256)",
+    "redirect: PASS (SHA-256)",
+    "empty416: PASS (SHA-256)",
+    "fallback: PASS (SHA-256)",
+    "retry: PASS (SHA-256)",
+    "bad-range: PASS (rejected)",
+    "error: PASS (rejected)",
+    "pause/resume: PASS (checkpoint + SHA-256)",
+    "forced termination/resume: PASS (SHA-256)",
+    "corrupted checkpoint: PASS (redownload + SHA-256)",
+    "changed ETag: PASS (restart + SHA-256)",
+    "final rename recovery + protected URL: PASS",
+    "completed resume is idempotent: PASS",
+    "64 limit + adaptive segment count: PASS",
+    "actual 64 segments / 512 MiB: PASS (SHA-256)"
+  ]
+}

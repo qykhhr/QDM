@@ -1,0 +1,8 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>QDM 资源下载</title><link rel="stylesheet" href="ui.css"></head><body class="popup">
+<header><div class="brand">Q<span>↓</span>DM</div><button id="settings" class="quiet">连接设置</button></header>
+<div class="status"><span id="dot"></span><span id="connection">正在连接桌面程序…</span></div>
+<div class="toolbar"><strong>当前页面资源 <small id="count">0</small></strong><button id="scan">扫描页面</button><button id="clear" class="quiet">清空</button></div>
+<div class="filters"><button data-kind="all" class="selected">全部</button><button data-kind="video">视频</button><button data-kind="audio">音频</button><button data-kind="image">图片</button><button data-kind="files">文件</button><button data-kind="stream">流媒体</button></div>
+<p id="message" role="status"></p><main id="resources"><p class="empty">尚未发现资源。刷新网页或开始播放音视频后再查看，也可扫描当前页面。</p></main>
+<form id="manual"><input id="url" type="url" placeholder="或粘贴 HTTP / HTTPS 下载地址" required><button type="submit">下载</button></form>
+<footer>资源仅保存在本次浏览器会话。登录资源可能需要额外鉴权。</footer><script type="module" src="popup.js"></script></body></html>

@@ -1,0 +1,6 @@
+build/
+dist/
+third_party/*.zip
+*.pro.user*
+__pycache__/
+tests/work/

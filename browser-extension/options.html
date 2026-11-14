@@ -1,0 +1,10 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><title>QDM 扩展设置</title><link rel="stylesheet" href="ui.css"></head><body class="options"><header><div class="brand">Q<span>↓</span>DM</div><span>浏览器连接设置</span></header><main>
+<h1>把网页资源交给 QDM</h1><p>扩展只在本机保存候选资源，不上传浏览历史。下载文件保存在桌面程序“浏览器扩展”中选择的目录。</p>
+<form id="config"><label class="check"><input id="enabled" type="checkbox"> 自动识别当前网页中的可下载资源</label>
+<label class="check"><input id="takeover" type="checkbox"> 自动接管浏览器下载并打开 QDM</label><small>交接成功后停止浏览器下载；QDM 未连接时恢复浏览器下载。非 HTTP(S)、已知 POST 和浏览器标记不安全的下载保留给浏览器。</small>
+<label>连接方式<select id="mode"><option value="native">本机宿主（推荐，安装后自动连接）</option><option value="portable">便携配对（无需注册宿主）</option></select></label>
+<section id="native-help"><h2>首次连接</h2><ol><li>在 Chrome / Edge 扩展管理页加载本扩展文件夹。</li><li>运行项目的 <code>scripts/register-native-host.ps1</code> 注册当前用户宿主。</li><li>启动 QDM 0.2.0 或更高版本，再点击“测试连接”。</li></ol><p>扩展 ID：<code id="extension-id"></code></p></section>
+<label id="pairing-field">配对信息<textarea id="pairing" rows="5" spellcheck="false" placeholder="粘贴 QDM → 浏览器扩展 → 复制便携配对信息"></textarea><small>此信息包含本机连接密钥，请勿发给网页或其他扩展。</small></label>
+<div class="toolbar"><button type="submit">保存设置</button><button type="button" id="test" class="quiet">测试连接</button></div><p id="result" role="status"></p></form>
+<h2>支持范围</h2><p>支持 HTTP/HTTPS 文件、直接音视频地址、图片、程序和文档，默认自动接管普通浏览器下载。流媒体清单仅识别和复制，尚不支持合并；Blob、DRM 和需要登录凭据的资源不能保证下载。扩展不读取 Cookie；已知 POST、隐私窗口及浏览器标记不安全的下载保留给浏览器。</p>
+</main><script type="module" src="options.js"></script></body></html>

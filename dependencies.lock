@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "target": "Windows 10/11 x64",
+  "qt": {
+    "version": "5.8.0",
+    "kit": "msvc2013_64",
+    "path": "D:/Qt/Qt5.8.0/5.8/msvc2013_64",
+    "linkage": "dynamic"
+  },
+  "compiler": {
+    "version": "MSVC 2013 v120",
+    "path": "D:/Program Files (x86)/Microsoft Visual Studio 12.0/VC",
+    "runtime": "MD, app-local msvcp120/msvcr120"
+  },
+  "curl": {
+    "version": "8.23.0_9",
+    "library_version": "8.23.0",
+    "url": "https://curl.se/windows/dl-8.23.0_9/curl-8.23.0_9-win64-mingw.zip",
+    "sha256": "89cb71930f4242d884e8e349463455932ab1d089b20f4f99318261a3cbff9167",
+    "abi": "x64 C DLL; v120 import library generated from official DEF",
+    "tls": "LibreSSL 4.4.1, CURLSSLOPT_NATIVE_CA, peer and hostname verification enabled",
+    "build_manifest": "third_party/curl/curl-8.23.0_9-win64-mingw/BUILD-MANIFEST.txt",
+    "licenses": "third_party/curl/curl-8.23.0_9-win64-mingw/COPYING.txt and dep/"
+  },
+  "sqlite": {
+    "version": "3.54.1",
+    "url": "https://www.sqlite.org/2026/sqlite-amalgamation-3540100.zip",
+    "sha3_256": "92281c86e2957f9b9305890f9ac04204caa7b677cc868dc326d942689df28e30",
+    "build": "amalgamation compiled as C with v120; THREADSAFE=1, DQS=0, OMIT_LOAD_EXTENSION",
+    "license": "public domain"
+  },
+  "media": {
+    "yt_dlp": "not integrated in 0.1.0",
+    "ffmpeg": "not integrated in 0.1.0",
+    "ffprobe": "not integrated in 0.1.0"
+  },
+  "browser_extension": {
+    "version": "0.2.0",
+    "manifest_version": 3,
+    "minimum_chromium": 114,
+    "extension_id": "nkblcdnjneadmggjpnjajlbebpbmhjpj",
+    "native_host": "com.qdm.download_manager",
+    "desktop_api_version": 1,
+    "desktop_minimum": "0.2.1",
+    "external_js_dependencies": []
+  }
+}

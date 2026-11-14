@@ -1,0 +1,88 @@
+[
+  {
+    "label": "baseline",
+    "exe_sha256": "f5ce3edc9937f6a68fc6d51d843f898988ded393d414bceb66f850d253190324",
+    "tls": true,
+    "size": 1073741824,
+    "results": [
+      {
+        "connections": 4,
+        "segments": 4,
+        "mib_per_second": 21.82,
+        "sample_seconds": 3.94
+      },
+      {
+        "connections": 8,
+        "segments": 8,
+        "mib_per_second": 43.08,
+        "sample_seconds": 3.73
+      },
+      {
+        "connections": 16,
+        "segments": 16,
+        "mib_per_second": 79.98,
+        "sample_seconds": 3.78
+      },
+      {
+        "connections": 64,
+        "segments": 64,
+        "mib_per_second": 101.41,
+        "sample_seconds": 3.92
+      }
+    ]
+  },
+  {
+    "label": "event-driven",
+    "exe_sha256": "48d7c8af92f2f1a952a7732368290ed511b281b0d16919d6bfa955884de29350",
+    "tls": true,
+    "size": 1073741824,
+    "results": [
+      {
+        "connections": 4,
+        "segments": 4,
+        "mib_per_second": 135.44,
+        "sample_seconds": 3.95
+      },
+      {
+        "connections": 8,
+        "segments": 8,
+        "mib_per_second": 135.06,
+        "sample_seconds": 3.94
+      },
+      {
+        "connections": 16,
+        "segments": 16,
+        "mib_per_second": 131.66,
+        "sample_seconds": 3.97
+      },
+      {
+        "connections": 64,
+        "segments": 64,
+        "mib_per_second": 130.26,
+        "sample_seconds": 3.95
+      }
+    ]
+  },
+  {
+    "label": "tls-complete",
+    "exe_sha256": "6a402a455cc046ae6180c9b96473a12e1680b0254e78e25581a4c3cd41349ee2",
+    "tls": true,
+    "size": 536871229,
+    "results": [
+      {
+        "connections": 4,
+        "segments": 4,
+        "mib_per_second": 136.6,
+        "sample_seconds": 2.69,
+        "sha256_verified": true
+      },
+      {
+        "connections": 64,
+        "segments": 64,
+        "mib_per_second": 132.94,
+        "sample_seconds": 3.02,
+        "sha256_verified": true
+      }
+    ]
+  }
+]
