@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3998D6BE-0E4E-46FF-B5E9-4CCE19D8394C}</ProjectGuid>
+    <RootNamespace>QDM</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolSet>v120</PlatformToolSet>
+    <OutputDirectory>bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <PrimaryOutput>QDM</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">bin\</OutDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">QDM</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <PreLinkEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</PreLinkEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;src;third_party\curl\curl-8.23.0_9-win64-mingw\include;third_party\sqlite\sqlite-amalgamation-3540100;..\..\Qt\Qt5.8.0\5.8\msvc2013_64\include;..\..\Qt\Qt5.8.0\5.8\msvc2013_64\include\QtWidgets;..\..\Qt\Qt5.8.0\5.8\msvc2013_64\include\QtGui;..\..\Qt\Qt5.8.0\5.8\msvc2013_64\include\QtANGLE;..\..\Qt\Qt5.8.0\5.8\msvc2013_64\include\QtNetwork;..\..\Qt\Qt5.8.0\5.8\msvc2013_64\include\QtCore;.;..\..\Qt\Qt5.8.0\5.8\msvc2013_64\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:strictStrings -w34100 -w34189 -w44996 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>.\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>.\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;SQLITE_THREADSAFE=1;SQLITE_DQS=0;SQLITE_OMIT_LOAD_EXTENSION;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>D:\Qt\Qt5.8.0\5.8\msvc2013_64\lib\qtmain.lib;D:\project\QDM\curl-import.lib;shell32.lib;crypt32.lib;advapi32.lib;D:\Qt\Qt5.8.0\5.8\msvc2013_64\lib\Qt5Widgets.lib;D:\Qt\Qt5.8.0\5.8\msvc2013_64\lib\Qt5Gui.lib;D:\Qt\Qt5.8.0\5.8\msvc2013_64\lib\Qt5Network.lib;D:\Qt\Qt5.8.0\5.8\msvc2013_64\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Qt\Qt5.8.0\5.8\msvc2013_64\lib;C:\utils\my_sql\my_sql\lib;C:\utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\QDM.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <Version>0.2</Version>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;SQLITE_THREADSAFE=1;SQLITE_DQS=0;SQLITE_OMIT_LOAD_EXTENSION;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy /y D:\project\QDM\third_party\curl\curl-8.23.0_9-win64-mingw\bin\libcurl-x64.dll D:\project\QDM\bin 
+if errorlevel 1 goto VCEnd
+ D:\Qt\Qt5.8.0\5.8\msvc2013_64\bin\windeployqt.exe --no-translations D:\project\QDM\bin\QDM.exe</Command>
+      <Message>copy /y D:\project\QDM\third_party\curl\curl-8.23.0_9-win64-mingw\bin\libcurl-x64.dll D:\project\QDM\bin 
+ D:\Qt\Qt5.8.0\5.8\msvc2013_64\bin\windeployqt.exe --no-translations D:\project\QDM\bin\QDM.exe</Message>
+    </PostBuildEvent>
+    <PreLinkEvent>
+      <Command>lib /nologo /machine:x64 /def:D:\project\QDM\third_party\curl\curl-8.23.0_9-win64-mingw\bin\libcurl-x64.def /name:libcurl-x64.dll /out:D:\project\QDM\curl-import.lib</Command>
+      <Message>lib /nologo /machine:x64 /def:D:\project\QDM\third_party\curl\curl-8.23.0_9-win64-mingw\bin\libcurl-x64.def /name:libcurl-x64.dll /out:D:\project\QDM\curl-import.lib</Message>
+    </PreLinkEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\browserbridge.cpp" />
+    <ClCompile Include="src\browserprotocol.cpp" />
+    <ClCompile Include="src\downloadengine.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\mainwindow.cpp" />
+    <ClCompile Include="src\repository.cpp" />
+    <ClCompile Include="third_party\sqlite\sqlite-amalgamation-3540100\sqlite3.c" />
+    <ClCompile Include="src\task.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\browserbridge.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src\browserbridge.h;moc_predefs.h;D:\Qt\Qt5.8.0\5.8\msvc2013_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\Qt5.8.0\5.8\msvc2013_64\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DSQLITE_THREADSAFE=1 -DSQLITE_DQS=0 -DSQLITE_OMIT_LOAD_EXTENSION -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include ./moc_predefs.h -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/mkspecs/win32-msvc2013 -ID:/project/QDM -ID:/project/QDM/src -ID:/project/QDM/third_party/curl/curl-8.23.0_9-win64-mingw/include -ID:/project/QDM/third_party/sqlite/sqlite-amalgamation-3540100 -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtWidgets -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtGui -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtANGLE -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtNetwork -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtCore -I"D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE" -I"D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\8.1\include\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\winrt" src\browserbridge.h -o moc_browserbridge.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC src/browserbridge.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_browserbridge.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\browserprotocol.h" />
+    <CustomBuild Include="src\downloadengine.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src\downloadengine.h;moc_predefs.h;D:\Qt\Qt5.8.0\5.8\msvc2013_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\Qt5.8.0\5.8\msvc2013_64\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DSQLITE_THREADSAFE=1 -DSQLITE_DQS=0 -DSQLITE_OMIT_LOAD_EXTENSION -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include ./moc_predefs.h -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/mkspecs/win32-msvc2013 -ID:/project/QDM -ID:/project/QDM/src -ID:/project/QDM/third_party/curl/curl-8.23.0_9-win64-mingw/include -ID:/project/QDM/third_party/sqlite/sqlite-amalgamation-3540100 -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtWidgets -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtGui -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtANGLE -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtNetwork -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtCore -I"D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE" -I"D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\8.1\include\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\winrt" src\downloadengine.h -o moc_downloadengine.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC src/downloadengine.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_downloadengine.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="src\mainwindow.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">src\mainwindow.h;moc_predefs.h;D:\Qt\Qt5.8.0\5.8\msvc2013_64\bin\moc.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Qt\Qt5.8.0\5.8\msvc2013_64\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DSQLITE_THREADSAFE=1 -DSQLITE_DQS=0 -DSQLITE_OMIT_LOAD_EXTENSION -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_NETWORK_LIB -DQT_CORE_LIB --compiler-flavor=msvc --include ./moc_predefs.h -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/mkspecs/win32-msvc2013 -ID:/project/QDM -ID:/project/QDM/src -ID:/project/QDM/third_party/curl/curl-8.23.0_9-win64-mingw/include -ID:/project/QDM/third_party/sqlite/sqlite-amalgamation-3540100 -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtWidgets -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtGui -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtANGLE -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtNetwork -ID:/Qt/Qt5.8.0/5.8/msvc2013_64/include/QtCore -I"D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\INCLUDE" -I"D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\ATLMFC\INCLUDE" -I"C:\Program Files (x86)\Windows Kits\8.1\include\shared" -I"C:\Program Files (x86)\Windows Kits\8.1\include\um" -I"C:\Program Files (x86)\Windows Kits\8.1\include\winrt" src\mainwindow.h -o moc_mainwindow.cpp</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC src/mainwindow.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_mainwindow.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="src\repository.h" />
+    <ClInclude Include="src\task.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="moc_browserbridge.cpp" />
+    <ClCompile Include="moc_downloadengine.cpp" />
+    <ClCompile Include="moc_mainwindow.cpp" />
+    <CustomBuild Include="moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\Qt\Qt5.8.0\5.8\msvc2013_64\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -BxD:\Qt\Qt5.8.0\5.8\msvc2013_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -O2 -MD -Zc:strictStrings -GR -W3 -w34100 -w34189 -w44996 -E -Za ..\..\Qt\Qt5.8.0\5.8\msvc2013_64\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

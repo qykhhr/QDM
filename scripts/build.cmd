@@ -13,8 +13,6 @@ call "D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" amd6
 if errorlevel 1 exit /b 1
 if not exist "build\%QDM_BUILD%" mkdir "build\%QDM_BUILD%"
 cd "build\%QDM_BUILD%"
-lib /nologo /machine:x64 /def:"%QDM_ROOT%\third_party\curl\curl-8.23.0_9-win64-mingw\bin\libcurl-x64.def" /name:libcurl-x64.dll /out:curl-import.lib
-if errorlevel 1 exit /b 1
 "D:\Qt\Qt5.8.0\5.8\msvc2013_64\bin\qmake.exe" "%QDM_ROOT%\QDM.pro" "CONFIG+=release" "CONFIG-=debug"
 if errorlevel 1 exit /b 1
 nmake /nologo

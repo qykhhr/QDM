@@ -14,6 +14,13 @@ SOURCES += src/browserbridge.cpp src/browserprotocol.cpp
 HEADERS += src/browserbridge.h src/browserprotocol.h
 DEFINES += SQLITE_THREADSAFE=1 SQLITE_DQS=0 SQLITE_OMIT_LOAD_EXTENSION
 win32 {
-    LIBS += $$OUT_PWD/curl-import.lib
+    # Build the MSVC import library from the DLL exports in every build tree.
+    # The bundled MinGW .a libraries cannot replace this v120 import library.
+    CURL_DEF = $$PWD/third_party/curl/curl-8.23.0_9-win64-mingw/bin/libcurl-x64.def
+    QMAKE_PRE_LINK += lib /nologo /machine:x64 /def:$$shell_quote($$shell_path($$CURL_DEF)) /name:libcurl-x64.dll /out:$$shell_quote($$shell_path($$OUT_PWD/curl-import.lib))
+    LIBS += $$quote($$OUT_PWD/curl-import.lib)
     LIBS += -lshell32 -lcrypt32 -ladvapi32
+    # Also deploy runtime dependencies when building directly from Visual Studio.
+    QMAKE_POST_LINK += $$QMAKE_COPY $$shell_quote($$shell_path($$PWD/third_party/curl/curl-8.23.0_9-win64-mingw/bin/libcurl-x64.dll)) $$shell_quote($$shell_path($$DESTDIR)) $$escape_expand(\\n\\t)
+    QMAKE_POST_LINK += $$shell_quote($$shell_path($$[QT_INSTALL_BINS]/windeployqt.exe)) --no-translations $$shell_quote($$shell_path($$DESTDIR/QDM.exe))
 }
